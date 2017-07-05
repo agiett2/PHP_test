@@ -12,7 +12,7 @@ $textData = explode("\n", $text);
 
 //sort the data by unit 
 sort($textData);
-array_multisort($jsonData);
+sort($jsonData);
 
 
 foreach ($jsonData as $k => $data){
