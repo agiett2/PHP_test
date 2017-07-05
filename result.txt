@@ -1,5 +1,0 @@
-#8 - Johnson
-#50 - Smith
-#100 - Sanders
-#1A - Kessenich
-#1B - Adams
