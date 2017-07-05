@@ -1,10 +1,5 @@
 <h1>PHP</h1>
 <?php
-$output = fopen('result.txt', 'w+');
-
-//get data from json
-$json = file_get_contents("test.json");
-$jsonData = json_decode($json, true);
 
 //get data from data.txt file
 $text = file_get_contents("data.txt");
@@ -12,17 +7,10 @@ $textData = explode("\n", $text);
 
 //sort the data by unit 
 sort($textData);
-sort($jsonData);
 
-
-foreach ($jsonData as $k => $data){
-   //STDOUT to result.txt file
-    fwrite($output, "#".$data['unit']." - ".$data['name']."\n");
-}
-
-foreach ($textData as $tdata){
+foreach ($textData as $data){
     //STDOUT data to index.php
-    echo $tdata."</br>";
+    echo $data."</br>";
 }
 ?>
 
